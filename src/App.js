@@ -4,6 +4,13 @@ import "bootstrap/dist/js/bootstrap.bundle.js";
 import "./styles.css";
 
 export default function App() {
+  async function loadFile(path) {
+    await import("./operators/" + path + ".js").then((module) => {
+      module.info();
+      module.bootstrap();
+    });
+  }
+
   return (
     <div className="container-fluid">
       <div className="row flex-nowrap">
@@ -36,7 +43,7 @@ export default function App() {
                   <li className="w-100">
                     <button
                       className="nav-link px-0"
-                      onClick="loadFile('utility/tap')"
+                      onClick={() => loadFile("utility/tap")}
                     >
                       tap / do
                     </button>
