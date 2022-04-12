@@ -1,4 +1,18 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css");
+
 .App {
   font-family: sans-serif;
   text-align: center;
+}
+
+h3 {
+  margin-top: 10px;
+}
+
+.bi {
+  margin-right: 5px;
+}
+
+.description {
+  display: inline;
 }
