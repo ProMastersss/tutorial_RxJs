@@ -4,6 +4,100 @@ import "bootstrap/dist/js/bootstrap.bundle.js";
 import "./styles.css";
 
 const menus = {
+  Filtering: [
+    {
+      name: "audit",
+      path: "filtering/audit"
+    },
+    {
+      name: "auditTime",
+      path: "filtering/auditTime"
+    },
+    {
+      name: "debounce",
+      path: "filtering/debounce"
+    },
+    {
+      name: "debounceTime",
+      path: "filtering/debounceTime"
+    },
+    {
+      name: "distinct",
+      path: "filtering/distinct"
+    },
+    {
+      name: "distinctUntilChanged",
+      path: "filtering/distinctUntilChanged"
+    },
+    {
+      name: "distinctUntilKeyChanged",
+      path: "filtering/distinctUntilKeyChanged"
+    },
+    {
+      name: "filter",
+      path: "filtering/filter"
+    },
+    {
+      name: "find",
+      path: "filtering/find"
+    },
+    {
+      name: "findIndex",
+      path: "filtering/findIndex"
+    },
+    {
+      name: "first",
+      path: "filtering/first"
+    },
+    {
+      name: "ignoreElements",
+      path: "filtering/ignoreElements"
+    },
+    {
+      name: "last",
+      path: "filtering/last"
+    },
+    {
+      name: "sample",
+      path: "filtering/sample"
+    },
+    {
+      name: "skip",
+      path: "filtering/skip"
+    },
+    {
+      name: "skipUntil",
+      path: "filtering/skipUntil"
+    },
+    {
+      name: "skipWhile",
+      path: "filtering/skipWhile"
+    },
+    {
+      name: "take",
+      path: "filtering/take"
+    },
+    {
+      name: "takeUntil",
+      path: "filtering/takeUntil"
+    },
+    {
+      name: "takeWhile",
+      path: "filtering/takeWhile"
+    },
+    {
+      name: "takeLast",
+      path: "filtering/takeLast"
+    },
+    {
+      name: "throttle",
+      path: "filtering/throttle"
+    },
+    {
+      name: "throttleTime",
+      path: "filtering/throttleTime"
+    }
+  ],
   Transformation: [
     {
       name: "buffer",
@@ -175,6 +269,12 @@ export const description = (content) => {
 
 export const output = (content) => {
   document.getElementsByClassName("log")[0].innerHTML += content + "<br>";
+};
+
+export const subscription = {
+  next: (val) => output("Результат: " + val),
+  error: (err) => output("Error: " + err),
+  complete: () => output("Завершен!")
 };
 
 export default function App() {
