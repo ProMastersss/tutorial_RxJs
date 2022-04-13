@@ -4,6 +4,56 @@ import "bootstrap/dist/js/bootstrap.bundle.js";
 import "./styles.css";
 
 const menus = {
+  Creation: [
+    {
+      name: "ajax",
+      path: "creation/ajax"
+    },
+    {
+      name: "create",
+      path: "creation/create"
+    },
+    {
+      name: "defer",
+      path: "creation/defer"
+    },
+    {
+      name: "empty",
+      path: "creation/empty"
+    },
+    {
+      name: "from",
+      path: "creation/from"
+    },
+    {
+      name: "fromEvent",
+      path: "creation/fromEvent"
+    },
+    {
+      name: "generate",
+      path: "creation/generate"
+    },
+    {
+      name: "interval",
+      path: "creation/interval"
+    },
+    {
+      name: "of",
+      path: "creation/of"
+    },
+    {
+      name: "range",
+      path: "creation/range"
+    },
+    {
+      name: "throwError",
+      path: "creation/throwError"
+    },
+    {
+      name: "timer",
+      path: "creation/timer"
+    }
+  ],
   Filtering: [
     {
       name: "audit",
