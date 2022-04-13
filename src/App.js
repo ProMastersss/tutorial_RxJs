@@ -4,6 +4,20 @@ import "bootstrap/dist/js/bootstrap.bundle.js";
 import "./styles.css";
 
 const menus = {
+  Error_handing: [
+    {
+      name: "catch / catchError",
+      path: "error-handling/catch"
+    },
+    {
+      name: "retry",
+      path: "error-handling/retry"
+    },
+    {
+      name: "retryWhen",
+      path: "error-handling/retryWhen"
+    }
+  ],
   Conditional: [
     {
       name: "defaultIfEmpty",
