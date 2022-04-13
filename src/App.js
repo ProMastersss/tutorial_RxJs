@@ -4,332 +4,408 @@ import "bootstrap/dist/js/bootstrap.bundle.js";
 import "./styles.css";
 
 const menus = {
+  Subjects: [
+    {
+      name: "Subject",
+      path: "subjects/subject"
+    },
+    {
+      name: "BehaviorSubject",
+      path: "subjects/behaviorSubject"
+    },
+    {
+      name: "ReplaySubject",
+      path: "subjects/replaySubject"
+    },
+    {
+      name: "AsyncSubject",
+      path: "subjects/asyncSubject"
+    }
+  ],
+  Combination: [
+    {
+      name: "combineAll",
+      path: "operators/combination/combineAll"
+    },
+    {
+      name: "combineLatest",
+      path: "operators/combination/combineLatest"
+    },
+    {
+      name: "concat",
+      path: "operators/combination/concat"
+    },
+    {
+      name: "concatAll",
+      path: "operators/combination/concatAll"
+    },
+    {
+      name: "endWith",
+      path: "operators/combination/endWith"
+    },
+    {
+      name: "forkJoin",
+      path: "operators/combination/forkJoin"
+    },
+    {
+      name: "merge",
+      path: "operators/combination/merge"
+    },
+    {
+      name: "mergeAll",
+      path: "operators/combination/mergeAll"
+    },
+    {
+      name: "pairwise",
+      path: "operators/combination/pairwise"
+    },
+    {
+      name: "race",
+      path: "operators/combination/race"
+    },
+    {
+      name: "startWith",
+      path: "operators/combination/startWith"
+    },
+    {
+      name: "withLatestFrom",
+      path: "operators/combination/withLatestFrom"
+    },
+    {
+      name: "zip",
+      path: "operators/combination/zip"
+    }
+  ],
   Error_handing: [
     {
       name: "catch / catchError",
-      path: "error-handling/catch"
+      path: "operators/error-handling/catch"
     },
     {
       name: "retry",
-      path: "error-handling/retry"
+      path: "operators/error-handling/retry"
     },
     {
       name: "retryWhen",
-      path: "error-handling/retryWhen"
+      path: "operators/error-handling/retryWhen"
+    },
+    {
+      name: "onErrorResumeNext",
+      path: "operators/error-handling/onErrorResumeNext"
     }
   ],
   Conditional: [
     {
       name: "defaultIfEmpty",
-      path: "conditional/defaultIfEmpty"
+      path: "operators/conditional/defaultIfEmpty"
     },
     {
       name: "every",
-      path: "conditional/every"
+      path: "operators/conditional/every"
     },
     {
       name: "iif",
-      path: "conditional/iif"
+      path: "operators/conditional/iif"
     },
     {
       name: "sequenceEqual",
-      path: "conditional/sequenceEqual"
+      path: "operators/conditional/sequenceEqual"
     }
   ],
   Creation: [
     {
       name: "ajax",
-      path: "creation/ajax"
+      path: "operators/creation/ajax"
     },
     {
       name: "create",
-      path: "creation/create"
+      path: "operators/creation/create"
     },
     {
       name: "defer",
-      path: "creation/defer"
+      path: "operators/creation/defer"
     },
     {
       name: "empty",
-      path: "creation/empty"
+      path: "operators/creation/empty"
     },
     {
       name: "from",
-      path: "creation/from"
+      path: "operators/creation/from"
     },
     {
       name: "fromEvent",
-      path: "creation/fromEvent"
+      path: "operators/creation/fromEvent"
     },
     {
       name: "generate",
-      path: "creation/generate"
+      path: "operators/creation/generate"
     },
     {
       name: "interval",
-      path: "creation/interval"
+      path: "operators/creation/interval"
     },
     {
       name: "of",
-      path: "creation/of"
+      path: "operators/creation/of"
     },
     {
       name: "range",
-      path: "creation/range"
+      path: "operators/creation/range"
     },
     {
       name: "throwError",
-      path: "creation/throwError"
+      path: "operators/creation/throwError"
     },
     {
       name: "timer",
-      path: "creation/timer"
+      path: "operators/creation/timer"
     }
   ],
   Filtering: [
     {
       name: "audit",
-      path: "filtering/audit"
+      path: "operators/filtering/audit"
     },
     {
       name: "auditTime",
-      path: "filtering/auditTime"
+      path: "operators/filtering/auditTime"
     },
     {
       name: "debounce",
-      path: "filtering/debounce"
+      path: "operators/filtering/debounce"
     },
     {
       name: "debounceTime",
-      path: "filtering/debounceTime"
+      path: "operators/filtering/debounceTime"
     },
     {
       name: "distinct",
-      path: "filtering/distinct"
+      path: "operators/filtering/distinct"
     },
     {
       name: "distinctUntilChanged",
-      path: "filtering/distinctUntilChanged"
+      path: "operators/filtering/distinctUntilChanged"
     },
     {
       name: "distinctUntilKeyChanged",
-      path: "filtering/distinctUntilKeyChanged"
+      path: "operators/filtering/distinctUntilKeyChanged"
     },
     {
       name: "filter",
-      path: "filtering/filter"
+      path: "operators/filtering/filter"
     },
     {
       name: "find",
-      path: "filtering/find"
+      path: "operators/filtering/find"
     },
     {
       name: "findIndex",
-      path: "filtering/findIndex"
+      path: "operators/filtering/findIndex"
     },
     {
       name: "first",
-      path: "filtering/first"
+      path: "operators/filtering/first"
     },
     {
       name: "ignoreElements",
-      path: "filtering/ignoreElements"
+      path: "operators/filtering/ignoreElements"
     },
     {
       name: "last",
-      path: "filtering/last"
+      path: "operators/filtering/last"
     },
     {
       name: "sample",
-      path: "filtering/sample"
+      path: "operators/filtering/sample"
     },
     {
       name: "skip",
-      path: "filtering/skip"
+      path: "operators/filtering/skip"
     },
     {
       name: "skipUntil",
-      path: "filtering/skipUntil"
+      path: "operators/filtering/skipUntil"
     },
     {
       name: "skipWhile",
-      path: "filtering/skipWhile"
+      path: "operators/filtering/skipWhile"
     },
     {
       name: "take",
-      path: "filtering/take"
+      path: "operators/filtering/take"
     },
     {
       name: "takeUntil",
-      path: "filtering/takeUntil"
+      path: "operators/filtering/takeUntil"
     },
     {
       name: "takeWhile",
-      path: "filtering/takeWhile"
+      path: "operators/filtering/takeWhile"
     },
     {
       name: "takeLast",
-      path: "filtering/takeLast"
+      path: "operators/filtering/takeLast"
     },
     {
       name: "throttle",
-      path: "filtering/throttle"
+      path: "operators/filtering/throttle"
     },
     {
       name: "throttleTime",
-      path: "filtering/throttleTime"
+      path: "operators/filtering/throttleTime"
     }
   ],
   Transformation: [
     {
       name: "buffer",
-      path: "transformation/buffer"
+      path: "operators/transformation/buffer"
     },
     {
       name: "bufferCount",
-      path: "transformation/bufferCount"
+      path: "operators/transformation/bufferCount"
     },
     {
       name: "bufferTime",
-      path: "transformation/bufferTime"
+      path: "operators/transformation/bufferTime"
     },
     {
       name: "bufferToggle",
-      path: "transformation/bufferToggle"
+      path: "operators/transformation/bufferToggle"
     },
     {
       name: "bufferWhen",
-      path: "transformation/bufferWhen"
+      path: "operators/transformation/bufferWhen"
     },
     {
       name: "concatMap",
-      path: "transformation/concatMap"
+      path: "operators/transformation/concatMap"
     },
     {
       name: "concatMapTo",
-      path: "transformation/concatMapTo"
+      path: "operators/transformation/concatMapTo"
     },
     {
       name: "exhaustMap",
-      path: "transformation/exhaustMap"
+      path: "operators/transformation/exhaustMap"
     },
     {
       name: "expand",
-      path: "transformation/expand"
+      path: "operators/transformation/expand"
     },
     {
       name: "groupBy",
-      path: "transformation/groupBy"
+      path: "operators/transformation/groupBy"
     },
     {
       name: "map",
-      path: "transformation/map"
+      path: "operators/transformation/map"
     },
     {
       name: "mapTo",
-      path: "transformation/mapTo"
+      path: "operators/transformation/mapTo"
     },
     {
       name: "mergeMap / flatMap",
-      path: "transformation/mergeMap"
+      path: "operators/transformation/mergeMap"
     },
     {
       name: "mergeScan",
-      path: "transformation/mergeScan"
+      path: "operators/transformation/mergeScan"
     },
     {
       name: "partition",
-      path: "transformation/partition"
+      path: "operators/transformation/partition"
     },
     {
       name: "pluck",
-      path: "transformation/pluck"
+      path: "operators/transformation/pluck"
     },
     {
       name: "reduce",
-      path: "transformation/reduce"
+      path: "operators/transformation/reduce"
     },
     {
       name: "scan",
-      path: "transformation/scan"
+      path: "operators/transformation/scan"
     },
     {
       name: "switchMap",
-      path: "transformation/switchMap"
+      path: "operators/transformation/switchMap"
     },
     {
       name: "switchMapTo",
-      path: "transformation/switchMapTo"
+      path: "operators/transformation/switchMapTo"
     },
     {
       name: "toArray",
-      path: "transformation/toArray"
+      path: "operators/transformation/toArray"
     },
     {
       name: "window",
-      path: "transformation/window"
+      path: "operators/transformation/window"
     },
     {
       name: "windowCount",
-      path: "transformation/windowCount"
+      path: "operators/transformation/windowCount"
     },
     {
       name: "windowTime",
-      path: "transformation/windowTime"
+      path: "operators/transformation/windowTime"
     },
     {
       name: "windowToggle",
-      path: "transformation/windowToggle"
+      path: "operators/transformation/windowToggle"
     },
     {
       name: "windowWhen",
-      path: "transformation/windowWhen"
+      path: "operators/transformation/windowWhen"
     }
   ],
   Utility: [
     {
       name: "tap / do",
-      path: "utility/tap"
+      path: "operators/utility/tap"
     },
     {
       name: "delay",
-      path: "utility/delay"
+      path: "operators/utility/delay"
     },
     {
       name: "delayWhen",
-      path: "utility/delayWhen"
+      path: "operators/utility/delayWhen"
     },
     {
       name: "materialize",
-      path: "utility/materialize"
+      path: "operators/utility/materialize"
     },
     {
       name: "dematerialize",
-      path: "utility/dematerialize"
+      path: "operators/utility/dematerialize"
     },
     {
       name: "finalize / finaly",
-      path: "utility/finalize"
+      path: "operators/utility/finalize"
     },
     {
       name: "repeat",
-      path: "utility/repeat"
+      path: "operators/utility/repeat"
     },
     {
       name: "timeInteranl",
-      path: "utility/timeInterval"
+      path: "operators/utility/timeInterval"
     },
     {
       name: "timeout",
-      path: "utility/timeout"
+      path: "operators/utility/timeout"
     },
     {
       name: "timeoutWith",
-      path: "utility/timeoutWith"
+      path: "operators/utility/timeoutWith"
     },
     {
       name: "toPromise",
-      path: "utility/toPromise"
+      path: "operators/utility/toPromise"
     }
   ]
 };
@@ -365,7 +441,7 @@ export default function App() {
       clear();
       resolve();
     }).then(() => {
-      import("./operators/" + path + ".js").then();
+      import("./" + path + ".js").then();
     });
   }
 
