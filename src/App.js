@@ -4,6 +4,24 @@ import "bootstrap/dist/js/bootstrap.bundle.js";
 import "./styles.css";
 
 const menus = {
+  Conditional: [
+    {
+      name: "defaultIfEmpty",
+      path: "conditional/defaultIfEmpty"
+    },
+    {
+      name: "every",
+      path: "conditional/every"
+    },
+    {
+      name: "iif",
+      path: "conditional/iif"
+    },
+    {
+      name: "sequenceEqual",
+      path: "conditional/sequenceEqual"
+    }
+  ],
   Creation: [
     {
       name: "ajax",
