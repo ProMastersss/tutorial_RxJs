@@ -94,6 +94,24 @@ const menus = {
       path: "operators/error-handling/onErrorResumeNext"
     }
   ],
+  Multicasting: [
+    {
+      name: "publish",
+      path: "operators/multicasting/publish"
+    },
+    {
+      name: "multicast",
+      path: "operators/multicasting/multicast"
+    },
+    {
+      name: "share",
+      path: "operators/multicasting/share"
+    },
+    {
+      name: "shareReplay",
+      path: "operators/multicasting/shareReplay"
+    }
+  ],
   Conditional: [
     {
       name: "defaultIfEmpty",
