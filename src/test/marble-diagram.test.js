@@ -1,7 +1,7 @@
 import { merge, mapTo, startWith, scan } from "rxjs";
-const { TestScheduler } = require("rxjs/testing");
+import { TestScheduler } from "rxjs/testing";
 
-const model = ({ up$, down$ }) =>
+const observable = ({ up$, down$ }) =>
   merge(
     up$.pipe(
       mapTo((state) => ({
@@ -18,31 +18,28 @@ const model = ({ up$, down$ }) =>
     scan((state, fn) => fn(state))
   );
 
-test("Test Model", () => {
+test("Test observable", () => {
   const testScheduler = new TestScheduler((actual, expected) => {
     expect(actual).toStrictEqual(expected);
   });
 
-  // mock streams
-  const upMarbles = "--x----x--x---";
-  const downMarbles = "----x-------x-";
-  const expected = "a-b-a--b--c-b-";
+  testScheduler.run((helpers) => {
+    const { expectObservable, hot, flush } = helpers;
 
-  const expectedStateMap = {
-    a: { count: 0 },
-    b: { count: 1 },
-    c: { count: 2 }
-  };
+    const up$ = hot("  --x----x--x---");
+    const down$ = hot("----x-------x-");
+    const expected = " a-b-a--b--c-b-";
 
-  // mock up$ and down$ events
-  const up$ = testScheduler.createHotObservable(upMarbles);
-  const down$ = testScheduler.createHotObservable(downMarbles);
+    const expectedStateMap = {
+      a: { count: 0 },
+      b: { count: 1 },
+      c: { count: 2 }
+    };
 
-  const state$ = model({ up$, down$ });
+    const state$ = observable({ up$, down$ });
 
-  // assertion
-  testScheduler.expectObservable(state$).toBe(expected, expectedStateMap);
+    expectObservable(state$).toBe(expected, expectedStateMap);
 
-  // run tests
-  testScheduler.flush();
+    flush();
+  });
 });
