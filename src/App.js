@@ -126,6 +126,10 @@ const menus = {
       path: "operators/conditional/iif"
     },
     {
+      name: "isEmpty",
+      path: "operators/conditional/isEmpty"
+    },
+    {
       name: "sequenceEqual",
       path: "operators/conditional/sequenceEqual"
     }
@@ -238,6 +242,10 @@ const menus = {
       path: "operators/filtering/sample"
     },
     {
+      name: "sampleTime",
+      path: "operators/filtering/sampleTime"
+    },
+    {
       name: "skip",
       path: "operators/filtering/skip"
     },
@@ -248,6 +256,10 @@ const menus = {
     {
       name: "skipWhile",
       path: "operators/filtering/skipWhile"
+    },
+    {
+      name: "single",
+      path: "operators/filtering/single"
     },
     {
       name: "take",
@@ -304,6 +316,10 @@ const menus = {
       path: "operators/transformation/concatMapTo"
     },
     {
+      name: "count",
+      path: "operators/transformation/count"
+    },
+    {
       name: "exhaustMap",
       path: "operators/transformation/exhaustMap"
     },
@@ -330,6 +346,14 @@ const menus = {
     {
       name: "mergeScan",
       path: "operators/transformation/mergeScan"
+    },
+    {
+      name: "min",
+      path: "operators/transformation/min"
+    },
+    {
+      name: "max",
+      path: "operators/transformation/max"
     },
     {
       name: "partition",
@@ -424,6 +448,14 @@ const menus = {
     {
       name: "toPromise",
       path: "operators/utility/toPromise"
+    },
+    {
+      name: "observeOn",
+      path: "operators/utility/observeOn"
+    },
+    {
+      name: "subscribeOn",
+      path: "operators/utility/subscribeOn"
     }
   ]
 };
